@@ -1,0 +1,7 @@
+summary: Delete Comment
+tasks:
+  - id: mongo_comment_delete
+    fn: datasource.mongo.Comment.delete
+    args:
+      where:
+        id: <% inputs.params.id %>

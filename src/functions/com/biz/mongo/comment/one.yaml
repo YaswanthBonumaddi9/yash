@@ -1,0 +1,7 @@
+summary: Fetch Comment
+tasks:
+  - id: mongo_comment_one
+    fn: datasource.mongo.Comment.findUnique
+    args:
+      where:
+        id: <% inputs.params.id %>

@@ -1,0 +1,6 @@
+summary: Create Comment
+tasks:
+  - id: mongo_comment_create
+    fn: datasource.mongo.Comment.create
+    args:
+      data: <% inputs.body %>

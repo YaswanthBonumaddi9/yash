@@ -1,0 +1,6 @@
+summary: Fetch many Comment
+tasks:
+  - id: mongo_comment_search
+    fn: datasource.mongo.Comment.findMany
+    args:
+      data: <% inputs.body %>

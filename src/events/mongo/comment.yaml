@@ -1,0 +1,88 @@
+# ONE
+http.get./mongo/comment/{id}:
+  summary: Fetch Comment
+  description: Fetch Comment from database
+  fn: com.biz.mongo.comment.one
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# CREATE
+http.post./mongo/comment:
+  summary: Create a new Comment
+  description: Create Comment from database
+  fn: com.biz.mongo.comment.create
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/mongo/Comment'
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# UPDATE
+http.put./mongo/comment/{id}:
+  summary: Update a Comment
+  description: Update Comment from database
+  fn: com.biz.mongo.comment.update
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/mongo/Comment'
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# DELETE
+http.delete./mongo/comment/{id}:
+  summary: Delete a Comment
+  description: Delete Comment from database
+  fn: com.biz.mongo.comment.delete
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
+
+# SEARCH
+http.post./mongo/comment/search:
+  summary: Fetch multiple Comment
+  description: Fetch multiple Comment from database
+  fn: com.biz.mongo.comment.search
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    content:
+      application/json:
+        schema:
+          type: array
+

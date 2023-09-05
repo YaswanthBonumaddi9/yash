@@ -1,0 +1,8 @@
+summary: Update Comment
+tasks:
+  - id: mongo_comment_update
+    fn: datasource.mongo.Comment.update
+    args:
+      where:
+        id: <% inputs.params.id %>
+      data: <% inputs.body %>

@@ -1,0 +1,14 @@
+id: hello_world_function
+summary: Call an API and transform the
+tasks:
+    - id: transform_fn_step1
+      description: add a message property
+      fn: com.gs.transform
+      args: |
+        <js%
+            {
+              greeting: "Hello " + inputs.body.name
+
+            }
+          %>
+     

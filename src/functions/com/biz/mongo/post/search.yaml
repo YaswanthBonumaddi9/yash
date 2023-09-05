@@ -1,0 +1,6 @@
+summary: Fetch many Post
+tasks:
+  - id: mongo_post_search
+    fn: datasource.mongo.Post.findMany
+    args:
+      data: <% inputs.body %>

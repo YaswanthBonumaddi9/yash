@@ -1,0 +1,18 @@
+id: hello_world_function
+summary: Call an API and transform the
+tasks:
+    - id: transform_fn_step1
+      description: add a message property
+      fn: com.gs.switch
+      value: <% inputs.body.name %>
+      cases:
+        'ashutosh':
+          - id: case_ashutosh
+            fn: com.gs.return
+            args: |
+              <% return { name: "Hello Ashutosh!" } %>
+        'shubham':
+          - id: case_shubham
+            fn: com.gs.return
+            args: |
+              <% return { name: "Hello Shubham!" } %>

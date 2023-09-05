@@ -1,0 +1,18 @@
+'http.post./sum':
+  fn: sum
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+          required: [name]
+  responses:
+    200:
+      content:
+        application/json:
+          schema:
+            type: object
+  

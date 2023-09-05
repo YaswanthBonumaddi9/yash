@@ -1,0 +1,26 @@
+Post:
+  type: object
+  properties:
+    slug:
+      type: string
+    title:
+      type: string
+    body:
+      type: string
+    authorId:
+      type: string
+User:
+  type: object
+  properties:
+    email:
+      type: string
+    name:
+      type: string
+      nullable: true
+Comment:
+  type: object
+  properties:
+    comment:
+      type: string
+    postId:
+      type: string
