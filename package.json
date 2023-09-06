@@ -5,16 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon -r dotenv ./src/index.ts",
-    "gen-docs": "npx @godspeedsystems/api-generator",
-    "build": "rimraf dist && tsc",
-    "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist"
+    "gen-docs": "npx @godspeedsystems/api-generator"
   },
-  "pre-commit":[
-    "ts.check",
-    "build",
-    "add-build"
-  ],
+
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -35,6 +28,7 @@
     "@godspeedsystems/core": "^2.0.0-beta.2",
     "@godspeedsystems/plugins-express-as-http": "^1.0.0-beta.5",
     "@godspeedsystems/plugins-prisma-as-datastore": "^1.0.0-beta.4",
+    "@prisma/client": "^5.2.0",
     "axios": "^1.4.0",
     "axios-time": "^1.0.0",
     "config": "^3.3.9",
@@ -48,7 +42,7 @@
     "lodash": "^4.17.21",
     "openapi-client-axios": "^7.3.3",
     "pino-pretty": "^10.2.0",
-    "prisma": "^5.1.1",
+    "prisma": "^5.2.0",
     "socket.io": "^4.7.2",
     "twilio": "^4.14.0"
   }
